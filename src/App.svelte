@@ -1,30 +1,19 @@
 <script>
-	export let name;
+	import { Router, Route } from "svelte-routing";
+	import Layout from "./layout/layout.svelte";
+	import Index from "./routes/index.svelte";
+	import Products from "./routes/produts.svelte";
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Router>
+	<Layout>
+		<Route path="/" component={Index} />
+		<Route path="/products" component={Products} />
+	</Layout>
+</Router>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+<style lang="postcss" global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
 </style>
