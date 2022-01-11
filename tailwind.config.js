@@ -1,5 +1,7 @@
+const production = !process.env.ROLLUP_WATCH;
+
 module.exports = {
-	content: ["./public/index.html", "./src/**/*.svelte"],
+	content: ["./src/**/*.svelte"],
 	darkMode: "media", // or 'media' or 'class'
 	theme: {
 		extend: {
@@ -15,5 +17,5 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [require("tailwindcss"), require("autoprefixer")],
+	plugins: [require("tailwindcss"), require("autoprefixer"), require("postcss-import")],
 };
