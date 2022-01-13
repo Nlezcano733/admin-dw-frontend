@@ -19,7 +19,7 @@
 	<Input label="Category" type="text" />
 
 	<div class="flex flex-wrap justify-end mt-4">
-		<BtnOutline label="Reset" type="reset" color="blue" />
-		<Btn label="Add product" type="submit" color="blue" />
+		<BtnOutline label="Reset" type="reset" />
+		<Btn label="Add product" type="submit" />
 	</div>
 </form>

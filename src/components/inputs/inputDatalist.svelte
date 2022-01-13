@@ -1,7 +1,7 @@
 <script>
 	export let label;
 	export let type;
-	export let defaultValue;
+	export let defaultValue = "";
 	export let options;
 
 	let dataOptions = [];
@@ -21,7 +21,7 @@
 		list={`data-${label}`}
 		autocomplete="off"
 		class="block px-2 py-1 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm"
-		value={defaultValue || ""}
+		value={defaultValue}
 	/>
 	<datalist id={`data-${label}`}>
 		{#each dataOptions as option}

@@ -1,7 +1,7 @@
 <script>
 	export let label;
 	export let type;
-	export let defaultValue;
+	export let defaultValue = "";
 	export let symbol;
 
 	const name = label.toLowerCase();
@@ -21,7 +21,7 @@
 		<input
 			{type}
 			{name}
-			value={defaultValue || ""}
+			value={defaultValue}
 			class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 
       block flex-1 min-w-0 w-full text-sm px-2 py-1"
 		/>
