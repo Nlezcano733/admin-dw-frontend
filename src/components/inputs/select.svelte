@@ -1,7 +1,7 @@
 <script>
 	export let label;
 	export let values;
-	export let defaultValue;
+	export let defaultValue = "";
 
 	const name = label.toLowerCase();
 </script>
